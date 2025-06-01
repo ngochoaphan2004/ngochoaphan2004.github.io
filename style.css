@@ -1,7 +1,7 @@
 ul {
-  list-style-type: disc;  
-  padding-left: 40px;     
-  margin-left: 0;         
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-left: 0;
 }
 
 
@@ -35,11 +35,11 @@ p {
     table-layout: fixed;
 }
 
-.major-tit{
+.major-tit {
     color: var(--primary-color);
 }
 
-.addition-tit{
+.addition-tit {
     color: var(--secondary-color);
 }
 
@@ -127,4 +127,79 @@ p {
     height: 100%;
     background-color: var(--primary-color);
     transform: translate(-50%, 0);
+}
+
+@media (width <=64rem) {
+    .p-ptit {
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .p-tit {
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    /* section */
+
+    .section .sec-left h4::after {
+        content: "";
+        position: absolute;
+        top: 16px;
+        right: -50px;
+        width: 36px;
+        height: 36px;
+        background-color: var(--primary-color);
+        transform: rotate(45deg) scale(0.71) translate(-50%, -50%);
+    }
+
+    .section .sec-left::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -39px;
+        width: 6px;
+        height: 100%;
+        background-color: var(--primary-color);
+        transform: translate(-50%, 0);
+    }
+
+    .section .sec-first::after {
+        height: calc(100% - 36px);
+        top: 36px;
+    }
+
+    /* subsection */
+    .sub-section .sec-left h4 {
+        position: relative;
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+        font-size: small;
+        font-weight: 400;
+        color: gray;
+    }
+
+    .sub-section .sec-left h4::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: -50px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        transform: scale(0.71) translate(-50%, -50%);
+    }
+
+    .sub-section .sec-left::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -39px;
+        width: 6px;
+        height: 100%;
+        background-color: var(--primary-color);
+        transform: translate(-50%, 0);
+    }
 }

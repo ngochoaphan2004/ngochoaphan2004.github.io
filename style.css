@@ -1,0 +1,130 @@
+ul {
+  list-style-type: disc;  
+  padding-left: 40px;     
+  margin-left: 0;         
+}
+
+
+:root {
+    --primary-color: #0098ff;
+    --secondary-color: gray;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: medium;
+}
+
+.p-ptit {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.p-tit {
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.major-tit{
+    color: var(--primary-color);
+}
+
+.addition-tit{
+    color: var(--secondary-color);
+}
+
+/* section */
+.section {
+    display: table-row;
+    position: relative;
+}
+
+.sec-left {
+    display: table-cell;
+    position: relative;
+    width: 20%;
+    align-items: end;
+}
+
+.sec-right {
+    display: table-cell;
+    padding: 15px 20px 0 70px;
+}
+
+.section .sec-left h4 {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+}
+
+.section .sec-left h4::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: -50px;
+    width: 36px;
+    height: 36px;
+    background-color: var(--primary-color);
+    transform: rotate(45deg) scale(0.71) translate(-50%, -50%);
+}
+
+.section .sec-left::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -39px;
+    width: 6px;
+    height: 100%;
+    background-color: var(--primary-color);
+    transform: translate(-50%, 0);
+}
+
+.section .sec-first::after {
+    height: calc(100% - 36px);
+    top: 36px;
+}
+
+/* subsection */
+.sub-section .sec-left h4 {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    font-size: large;
+    font-weight: 400;
+    color: gray;
+}
+
+.sub-section .sec-left h4::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -50px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transform: scale(0.71) translate(-50%, -50%);
+}
+
+.sub-section .sec-left::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -39px;
+    width: 6px;
+    height: 100%;
+    background-color: var(--primary-color);
+    transform: translate(-50%, 0);
+}

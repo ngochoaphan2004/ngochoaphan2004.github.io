@@ -1,10 +1,180 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Phan Ngoc Hoa</title>
-    </head>
-    <body>
-        hello
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <title>Phan Ngoc Hoa</title>
+</head>
+
+<body class="m-10">
+    <h1 class="p-ptit w-full text-center major-tit">PROFILE</h1>
+    <div class="lg:flex gap-10">
+        <div class="flex-1 flex flex-col gap-2">
+            <h2 class="p-ptit">ABOUT ME</h2>
+            <p>I’m a Computer Science student at Bach Khoa University, eager to develop my software skills through
+                real-world projects. I focus on strengthening my programming mindset, adaptability, and teamwork in
+                collaborative environments.
+
+                My goal is to quickly integrate into the workplace, take initiative in learning, and contribute to
+                software development and optimization. In the next 3–5 years, I aim to become a Senior Developer who can
+                lead teams and contribute meaningfully to both business growth and the tech community.</p>
+        </div>
+        <div class="flex items-center justify-center lg:max-w-[30%]">
+            <img src="avatar.jpg" alt="avatar" class="object-contain aspect-square rounded-full" />
+        </div>
+        <div class="flex-1 flex flex-col gap-2">
+            <h2 class="p-ptit">DETAILS</h2>
+            <div>
+                <p class="p-tit">Name:</p>
+                <p>Phan Ngọc Hòa</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="p-tit">Education:</p>
+                <p>Bachelor's Degree, Bach Khoa University (HCMUT)</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="p-tit">Resident:</p>
+                <p>Do Xuan Hop, Phuoc Long Ward, Ho Chi Minh City</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="p-tit">Phone number:</p>
+                <p>0339961558</p>
+            </div>
+            <div class="flex flex-col gap-1">
+                <p class="p-tit">Email:</p>
+                <p>phanngochoa2004@gmail.com</p>
+            </div>
+            <div class="flex gap-3 mt-3">
+                <a target="_blank" href="https://www.facebook.com/hoaphanngoc04/"><img src="fb.png" alt="facebook"
+                        class="h-auto md:w-[40px] w-[20px]"></a>
+                <!-- <a target="_blank" href=""><img src="in.png" alt="instagram" class="h-auto md:w-[40px] w-[20px]"></a> -->
+                <a target="_blank" href="https://www.linkedin.com/in/hoaphan2004/"><img src="linkedin.png"
+                        alt="linkedin" class="h-auto md:w-[40px] w-[20px]"></a>
+                <a target="_blank" href="https://github.com/ngochoaphan2004"><img src="github.png" alt="github"
+                        class="h-auto md:w-[40px] w-[20px]"></a>
+            </div>
+        </div>
+    </div>
+    <div class="table">
+        <!-- Objective -->
+        <div class="section">
+            <div class="p-ptit sec-left sec-first">
+                <h4>Objective</h4>
+            </div>
+            <div class="sec-right">
+                <p>I aspire to develop my professional software skills through participation in real-world projects,
+                    strengthening my programming mindset and teamwork abilities. My goal is to quickly adapt to the
+                    working environment, take initiative in learning, and contribute to team performance by supporting
+                    the development and optimization of software features. In the long term, I aim to become a Senior
+                    Developer within the next 3–5 years, capable of leading a team and making a meaningful contribution
+                    to the sustainable growth of the business as well as the tech community.</p>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section section">
+            <div class="p-ptit sec-left">
+                <h4>Education</h4>
+            </div>
+            <div class="sec-right">
+            </div>
+        </div>
+        <div class="section sub-section">
+            <div class="p-ptit sec-left">
+                <h4>2022-2026</h4>
+            </div>
+            <div class="sec-right">
+                <p class="major-tit">Ho Chi Minh University Of Technology</p>
+                <p>Bachelor's Degree - Computer Science</p>
+                <div class="addition-tit">
+                    <p>Achieved good academic results with a proactive mindset and self-learning
+                        ability.
+                    </p>
+                    <ul>
+                        <li>
+                            GPA: 3.0/4.0
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section section">
+            <div class="p-ptit sec-left">
+                <h4>Projects</h4>
+            </div>
+            <div class="sec-right">
+            </div>
+        </div>
+        <div class="section sub-section">
+            <div class="p-ptit sec-left">
+                <h4>12/2024-1/2025</h4>
+            </div>
+            <div class="sec-right">
+                <p class="major-tit">WEB PROGRAMMING FOR FARM MANAGEMENT</p>
+                <div class="addition-tit">
+                    <ul>
+                        <li>
+                            This project involves developing a website using React and TypeScript for the user
+                            interface, connected to an MSSQL database deployed in a Docker container environment. The
+                            system collects and processes sensor data through the Adafruit platform.
+                        </li>
+                        <li>
+                            During the project, I contributed by building several APIs to facilitate communication
+                            between the frontend and backend, implementing user interface components, and testing
+                            software features.
+                        </li>
+                    </ul>
+                    <p>Git repository: https://github.com/ngochoaphan2004/FarmManagement</p>
+                </div>
+            </div>
+        </div>
+        <div class="section sub-section">
+            <div class="p-ptit sec-left">
+                <h4>3/2025 - 4/2025</h4>
+            </div>
+            <div class="sec-right">
+                <p class="major-tit">WEB PROGRAMMING FOR COMPANY/ORGANIZATION</p>
+                <div class="addition-tit">
+                    <ul>
+                        <li>
+                            This project builds an informational website for a company or business. The frontend is
+                            developed using React, and the backend uses PHP with a MySQL database. The whole system is
+                            designed to be responsive, user-friendly, and optimized for SEO and performance.
+                        </li>
+                        <li>
+                            During the project, I was responsible for programming several UI components such as the
+                            navbar, footer, ... and pages including home, profi le, contact, admin contact management,
+                            and company information. I also developed some backend APIs to support the frontend
+                            features.
+                        </li>
+                    </ul>
+                    <p>Git repository:https://github.com/ngochoaphan2004/Web_programming_assignment</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skill -->
+        <div class="section">
+            <div class="p-ptit sec-left">
+                <h4>Skills</h4>
+            </div>
+            <div class="sec-right">
+
+            </div>
+        </div>
+</body>
+
 </html>

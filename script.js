@@ -1,5 +1,34 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const rootEl = document.documentElement;
+    const icon = themeToggle.querySelector('i');
+    
+    // Check local storage for theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        rootEl.classList.add('light-mode');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+        rootEl.classList.toggle('light-mode');
+        const isLight = rootEl.classList.contains('light-mode');
+        
+        // Update icon
+        if (isLight) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            localStorage.setItem('theme', 'light');
+        } else {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
     // Header scroll effect
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {

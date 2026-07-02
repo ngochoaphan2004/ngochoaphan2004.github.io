@@ -507,6 +507,10 @@
             };
             animate();
 
+            // Default Light Mode
+            const rootEl = document.documentElement;
+            rootEl.classList.add('light-mode');
+
             window.addEventListener("resize", () => {
                 rect = container.getBoundingClientRect();
                 renderer.setSize(rect.width, rect.height);

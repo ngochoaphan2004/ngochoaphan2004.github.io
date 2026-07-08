@@ -102,32 +102,48 @@ header {
     width: 100%;
     z-index: 1000;
     background: transparent;
+    transition: all 0.3s ease;
+}
+
+.header-container {
     padding: 1.5rem 5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
     transition: all 0.3s ease;
 }
 
 header.scrolled {
-    padding: 1rem 5%;
     background: var(--bg-header, rgba(10, 10, 10, 0.8));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
-}
-
-header.scrolled {
-    padding: 1rem 5%;
     box-shadow: var(--shadow-sm);
 }
 
-.logo {
-    font-family: 'Inria Sans', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
+header.scrolled .header-container {
+    padding: 1rem 5%;
+}
+
+.header-actions {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
     color: var(--text-main);
-    letter-spacing: 2px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    margin-left: 15px;
 }
 
 nav ul {
@@ -225,9 +241,9 @@ section {
 }
 
 #character-canvas {
-    /* width: 100%;
-    max-width: 450px;
-    height: 450px; */
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     outline: none;
@@ -243,8 +259,6 @@ section {
 }
 
 .hero-model canvas {
-    width: 450px !important;
-    height: 450px !important;
     pointer-events: none;
 }
 
@@ -758,15 +772,15 @@ footer {
         font-size: 3.5rem;
     }
     .timeline::after {
-        left: 40px;
+        left: 20px;
     }
     .timeline-item {
         width: 100%;
-        padding-left: 80px;
+        padding-left: 50px;
         padding-right: 0;
     }
     .timeline-item::after {
-        left: 30px;
+        left: 14px;
     }
     .right {
         left: 0%;
@@ -774,20 +788,76 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .hero-title {
-        font-size: 2.8rem;
+    html {
+        font-size: 14px;
     }
-    .hero-roles {
+    .mobile-menu-btn {
+        display: block;
+    }
+    nav#main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--bg-main);
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    nav#main-nav.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    nav#main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    nav#main-nav ul li a {
         font-size: 1.5rem;
     }
-    nav ul {
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-top: 100px;
+        height: auto;
+        min-height: 100vh;
+    }
+    .hero-content {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .hero-content p {
+        margin: 0 auto 2rem;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-model {
         display: none;
+    }
+    #character-canvas {
+        max-width: 350px;
+        height: 350px;
+    }
+    .hero-contact {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
     }
     .btn {
         width: 100%;
         justify-content: center;
     }
-    .hero-contact {
-        width: 100%;
+    section {
+        padding: 2rem 5% 1rem;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
     }
 }

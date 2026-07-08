@@ -29,6 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Language Toggle Logic
+    const langToggle = document.getElementById('lang-toggle');
+    let currentLang = localStorage.getItem('lang') || 'en';
+    
+    function applyLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (window.translations && window.translations[lang] && window.translations[lang][key]) {
+                el.innerHTML = window.translations[lang][key];
+            }
+        });
+        langToggle.textContent = lang.toUpperCase();
+        localStorage.setItem('lang', lang);
+        
+        if (lang === 'vi') {
+            document.documentElement.classList.add('lang-vi');
+        } else {
+            document.documentElement.classList.remove('lang-vi');
+        }
+    }
+    
+    // Initial apply
+    applyLanguage(currentLang);
+    
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'vi' : 'en';
+        applyLanguage(currentLang);
+    });
+
     // Header scroll effect
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {

@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phan Ngoc Hoa | Portfolio</title>
+    <link rel="icon" href="favicon.png" type="image/png">
     <meta name="description" content="Portfolio of Phan Ngoc Hoa - Embedding & Software Engineer">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="lang.js"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
 
     <script type="importmap">
@@ -26,11 +28,12 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><button id="lang-toggle" class="theme-toggle" aria-label="Toggle language" style="font-size: 1rem; font-weight: bold; width: 30px;">EN</button></li>
                 <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button></li>
             </ul>
         </nav>
@@ -40,18 +43,18 @@
         <!-- Hero Section -->
         <section id="home" class="hero reveal">
             <div class="hero-content">
-                <h2 class="hero-subtitle">Welcome to my portfolio</h2>
-                <h1 class="hero-title">Hi, I'm Phan Ngoc Hoa</h1>
+                <h2 class="hero-subtitle" data-i18n="hero.subtitle">Welcome to my portfolio</h2>
+                <h1 class="hero-title" data-i18n="hero.title">Hi, I'm Phan Ngoc Hoa</h1>
                 <!-- <div class="hero-roles">
                     <span class="typing-text"></span><span class="cursor"></span>
                 </div> -->
-                <p style="color: var(--text-muted); max-width: 600px; font-size: 1.1rem; margin-bottom: 2rem;">
+                <p data-i18n="hero.desc" style="color: var(--text-muted); max-width: 600px; font-size: 1.1rem; margin-bottom: 2rem;">
                     A passionate engineer bridging the gap between hardware and software. Specializing in embedded
                     systems and modern backend architectures.
                 </p>
                 <div class="hero-contact">
                     <a href="mailto:phanngochoa2004@gmail.com" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Contact Me
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="hero.contact">Contact Me</span>
                     </a>
                     <a href="https://github.com/ngochoaphan2004" target="_blank" class="btn btn-secondary">
                         <i class="fab fa-github"></i> GitHub
@@ -67,29 +70,29 @@
 
         <!-- About / Education & Awards -->
         <section id="about">
-            <h2 class="section-title reveal">Background</h2>
+            <h2 class="section-title reveal" data-i18n="about.title">Background</h2>
             <div class="info-grid">
                 <!-- Education -->
                 <div class="glass-card reveal">
-                    <h3 class="card-title">Ho Chi Minh City University of Technology (HCMUT) - VNUHCM</h3>
-                    <h4 class="card-subtitle">Pursuing a Bachelor of Computer Science</h4>
+                    <h3 class="card-title" data-i18n="about.edu.uni">Ho Chi Minh City University of Technology (HCMUT) - VNUHCM</h3>
+                    <h4 class="card-subtitle" data-i18n="about.edu.deg">Pursuing a Bachelor of Computer Science</h4>
                     <div class="card-date">
-                        <i class="far fa-calendar-alt"></i> Oct 2022 – Present
+                        <i class="far fa-calendar-alt"></i> <span data-i18n="about.edu.date">Oct 2022 – Present</span>
                     </div>
                     <div class="card-meta">
-                        <strong>Location:</strong> Ho Chi Minh City, Viet Nam <br>
-                        <strong>GPA:</strong> 3.3
+                        <strong data-i18n="about.edu.loc">Location:</strong> <span data-i18n="about.edu.loc_val">Ho Chi Minh City, Viet Nam</span> <br>
+                        <strong data-i18n="about.edu.gpa">GPA:</strong> 3.3
                     </div>
                 </div>
                 <!-- Awards -->
                 <div class="glass-card reveal" style="transition-delay: 0.1s;">
-                    <h3 class="card-title">Honors and Awards</h3>
-                    <h4 class="card-subtitle">Provincial Physics Contest</h4>
+                    <h3 class="card-title" data-i18n="about.awd.title">Honors and Awards</h3>
+                    <h4 class="card-subtitle" data-i18n="about.awd.sub">Provincial Physics Contest</h4>
                     <div class="card-date">
-                        <i class="fas fa-medal"></i> Second Place
+                        <i class="fas fa-medal"></i> <span data-i18n="about.awd.place">Second Place</span>
                     </div>
                     <div class="card-meta">
-                        <strong>Location:</strong> Dong Nai
+                        <strong>Location:</strong> <span data-i18n="about.awd.loc">Dong Nai</span>
                     </div>
                 </div>
             </div>
@@ -98,22 +101,22 @@
 
         <!-- Experience Section -->
         <section id="experience">
-            <h2 class="section-title reveal">Experience</h2>
+            <h2 class="section-title reveal" data-i18n="exp.title">Experience</h2>
             <div class="timeline reveal">
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3>FPT Software Ho Chi Minh</h3>
-                        <h4>Back-End Developer (Intern)</h4>
-                        <div class="date"><i class="far fa-calendar-alt"></i> May 2025 – July 2025</div>
-                        <p><strong>Blood Test Management System</strong></p>
+                        <h3 data-i18n="exp.fpt.title">FPT Software Ho Chi Minh</h3>
+                        <h4 data-i18n="exp.fpt.role">Back-End Developer (Intern)</h4>
+                        <div class="date"><i class="far fa-calendar-alt"></i> <span data-i18n="exp.fpt.date">May 2025 – July 2025</span></div>
+                        <p><strong data-i18n="exp.fpt.proj">Blood Test Management System</strong></p>
                         <ul>
-                            <li>Designed and implemented a microservices-based backend utilizing REST APIs and
+                            <li data-i18n="exp.fpt.desc1">Designed and implemented a microservices-based backend utilizing REST APIs and
                                 independent databases for data isolation.</li>
-                            <li>Engineered high-performance gRPC endpoints and created comprehensive API documentation
+                            <li data-i18n="exp.fpt.desc2">Engineered high-performance gRPC endpoints and created comprehensive API documentation
                                 with Swagger/OpenAPI.</li>
-                            <li>Implemented a Message Broker for asynchronous data transfer, decoupling systems and
+                            <li data-i18n="exp.fpt.desc3">Implemented a Message Broker for asynchronous data transfer, decoupling systems and
                                 ensuring fault tolerance.</li>
-                            <li>Participated in Agile Scrum workflows to design system architectures using Use Case
+                            <li data-i18n="exp.fpt.desc4">Participated in Agile Scrum workflows to design system architectures using Use Case
                                 diagrams and ERDs.</li>
                         </ul>
                     </div>
@@ -123,28 +126,28 @@
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2 class="section-title reveal">Featured Projects</h2>
+            <h2 class="section-title reveal" data-i18n="proj.title">Featured Projects</h2>
             <div class="projects-grid">
 
                 <!-- Project 1 -->
                 <div class="project-card project-featured reveal" style="transition-delay: 0.1s;">
                     <div class="project-content">
-                        <div class="project-type">Full-Stack / AI</div>
-                        <h3 class="project-title">Decentralized Federated Learning in Financial Systems</h3>
-                        <div class="project-date">August 2025 – June 2026 | Graduation Project</div>
+                        <div class="project-type" data-i18n="proj.type.fs">Full-Stack / AI</div>
+                        <h3 class="project-title" data-i18n="proj1.title">Decentralized Federated Learning in Financial Systems</h3>
+                        <div class="project-date" data-i18n="proj1.date">August 2025 – June 2026 | Graduation Project</div>
                         <div class="project-desc">
-                            Architected and developed <strong>BK-BANK</strong>, a comprehensive digital banking system
+                            <span data-i18n="proj1.desc">Architected and developed <strong>BK-BANK</strong>, a comprehensive digital banking system
                             utilizing a Microservices architecture, seamlessly integrated with a novel Decentralized
-                            Federated Learning (DFedADP) algorithm for real-time fraud detection. 
-                            <strong>Awarded Excellent Graduation Thesis (Score: 9.85/10)</strong> and resulted in a published paper at the <strong>IAAA 2026 International Conference</strong>.
+                            Federated Learning (DFedADP) algorithm for real-time fraud detection.</span> 
+                            <strong data-i18n="proj1.award">Awarded Excellent Graduation Thesis (Score: 9.85/10)</strong> <span data-i18n="proj1.award2">and resulted in a published paper at the</span> <strong data-i18n="proj1.award3">IAAA 2026 International Conference</strong>.
                             <ul>
-                                <li><strong>Microservices Backend:</strong> Engineered Core Ledger, Card Management, and
+                                <li data-i18n="proj1.d1"><strong>Microservices Backend:</strong> Engineered Core Ledger, Card Management, and
                                     Authentication services using Java Spring Boot, deployed via Docker on Railway PaaS.
                                 </li>
-                                <li><strong>Mobile Frontend & NLP:</strong> Built a cross-platform mobile banking app
+                                <li data-i18n="proj1.d2"><strong>Mobile Frontend & NLP:</strong> Built a cross-platform mobile banking app
                                     with React Native. Integrated a local LLM (Qwen) to provide real-time natural
                                     language explanations (XAI) for flagged transactions.</li>
-                                <li><strong>Algorithm Performance:</strong> The DFedADP model achieved 80.55% accuracy
+                                <li data-i18n="proj1.d3"><strong>Algorithm Performance:</strong> The DFedADP model achieved 80.55% accuracy
                                     under extreme heterogeneity on MNIST (outperforming baselines by 39-69%), and a
                                     Recall of 0.60 on highly imbalanced credit card data.</li>
                             </ul>
@@ -159,10 +162,10 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/DATN-252" target="_blank">
-                                <i class="fab fa-github"></i> Repository
+                                <i class="fab fa-github"></i> <span data-i18n="proj.repo">Repository</span>
                             </a>
                             <a href="https://tinyurl.com/DFedADP" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Article
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="proj.article">Article</span>
                             </a>
                         </div>
                     </div>
@@ -171,18 +174,18 @@
                 <!-- Project 2 -->
                 <div class="project-card reveal">
                     <div class="project-content">
-                        <div class="project-type">Embedded Systems</div>
-                        <h3 class="project-title">Automotive Head-Up Display (CHUD)</h3>
-                        <div class="project-date">April 2026 – June 2026 | Personal Project</div>
+                        <div class="project-type" data-i18n="proj.type.emb">Embedded Systems</div>
+                        <h3 class="project-title" data-i18n="proj2.title">Automotive Head-Up Display (CHUD)</h3>
+                        <div class="project-date" data-i18n="proj2.date">April 2026 – June 2026 | Personal Project</div>
                         <div class="project-desc">
-                            Designed an embedded HUD for vehicles reading real-time telemetries (Speed, RPM, battery)
-                            via OBD-II and rendering on an LCD.
+                            <span data-i18n="proj2.desc">Designed an embedded HUD for vehicles reading real-time telemetries (Speed, RPM, battery)
+                            via OBD-II and rendering on an LCD.</span>
                             <ul>
-                                <li>Architected FreeRTOS dual-core tasking (Core 1: CAN Bus polling, Core 0: 60 FPS LVGL
+                                <li data-i18n="proj2.d1">Architected FreeRTOS dual-core tasking (Core 1: CAN Bus polling, Core 0: 60 FPS LVGL
                                     UI).</li>
-                                <li>Developed OBD-II parser and programmed the ESP32 RISC-V co-processor for ultra-low
+                                <li data-i18n="proj2.d2">Developed OBD-II parser and programmed the ESP32 RISC-V co-processor for ultra-low
                                     power deep-sleep cycles.</li>
-                                <li>Integrated hardware calibration with ambient light sensors for dynamic backlight
+                                <li data-i18n="proj2.d3">Integrated hardware calibration with ambient light sensors for dynamic backlight
                                     adjustment.</li>
                             </ul>
                         </div>
@@ -196,7 +199,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/ngochoaphan2004/CHUD" target="_blank">
-                                <i class="fab fa-github"></i> Repository
+                                <i class="fab fa-github"></i> <span data-i18n="proj.repo">Repository</span>
                             </a>
                         </div>
                     </div>
@@ -206,18 +209,18 @@
                 <!-- Project 3 -->
                 <div class="project-card reveal" style="transition-delay: 0.2s;">
                     <div class="project-content">
-                        <div class="project-type">Big Data / NLP</div>
-                        <h3 class="project-title">Latent Semantic Analysis on Wikipedia</h3>
-                        <div class="project-date">Big Data Processing Project</div>
+                        <div class="project-type" data-i18n="proj.type.bd">Big Data / NLP</div>
+                        <h3 class="project-title" data-i18n="proj3.title">Latent Semantic Analysis on Wikipedia</h3>
+                        <div class="project-date" data-i18n="proj3.date">Big Data Processing Project</div>
                         <div class="project-desc">
-                            Built a scalable data pipeline using PySpark and HDFS to perform Latent Semantic Analysis
-                            (LSA) on the entire English Wikipedia dump.
+                            <span data-i18n="proj3.desc">Built a scalable data pipeline using PySpark and HDFS to perform Latent Semantic Analysis
+                            (LSA) on the entire English Wikipedia dump.</span>
                             <ul>
-                                <li>Processed massive uncompressed XML dumps via <code>spark-xml</code> on distributed
+                                <li data-i18n="proj3.d1">Processed massive uncompressed XML dumps via <code>spark-xml</code> on distributed
                                     nodes.</li>
-                                <li>Generated semantic document embeddings, term embeddings, and extracted top latent
+                                <li data-i18n="proj3.d2">Generated semantic document embeddings, term embeddings, and extracted top latent
                                     topics from millions of articles.</li>
-                                <li>Configured seamless integration between Windows environments and WSL-based HDFS
+                                <li data-i18n="proj3.d3">Configured seamless integration between Windows environments and WSL-based HDFS
                                     clusters.</li>
                             </ul>
                         </div>
@@ -229,7 +232,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/ngochoaphan2004/big_data_wiki" target="_blank">
-                                <i class="fab fa-github"></i> Repository
+                                <i class="fab fa-github"></i> <span data-i18n="proj.repo">Repository</span>
                             </a>
                         </div>
                     </div>
@@ -238,30 +241,29 @@
                 <!-- Project 4 -->
                 <div class="project-card reveal" style="transition-delay: 0.3s;">
                     <div class="project-content">
-                        <div class="project-type">Data Science / ML</div>
-                        <h3 class="project-title">Los Angeles Crime Data Mining</h3>
-                        <div class="project-date">Data Mining Project</div>
+                        <div class="project-type" data-i18n="proj.type.ds">Data Science / ML</div>
+                        <h3 class="project-title" data-i18n="proj4.title">Los Angeles Crime Data Mining</h3>
+                        <div class="project-date" data-i18n="proj4.date">Data Mining Project</div>
                         <div class="project-desc">
-                            Applied advanced data mining techniques to analyze and classify crime data from Los Angeles.
+                            <span data-i18n="proj4.desc">Applied advanced data mining techniques to analyze and classify crime data from Los Angeles.</span>
                             <ul>
-                                <li>Performed rigorous data preprocessing and outlier handling on large-scale crime
+                                <li data-i18n="proj4.d1">Performed rigorous data preprocessing and outlier handling on large-scale crime
                                     datasets.</li>
-                                <li>Utilized the Apriori algorithm to discover frequent itemsets and complex association
+                                <li data-i18n="proj4.d2">Utilized the Apriori algorithm to discover frequent itemsets and complex association
                                     rules between crime categories, areas, and premises.</li>
-                                <li>Built a Random Forest classifier to predict crime types based on temporal and
-                                    geospatial features.</li>
+                                <li data-i18n="proj4.d3">Trained predictive models (Decision Trees, Naive Bayes) with hyperparameter tuning to
+                                    forecast crime occurrences based on spatiotemporal features.</li>
                             </ul>
                         </div>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>Pandas/NumPy</span>
                             <span>Scikit-Learn</span>
-                            <span>Apriori</span>
-                            <span>Random Forest</span>
+                            <span>Pandas</span>
+                            <span>Data Mining</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/ngochoaphan2004/DataMining_L01_Nhom11" target="_blank">
-                                <i class="fab fa-github"></i> Repository
+                                <i class="fab fa-github"></i> <span data-i18n="proj.repo">Repository</span>
                             </a>
                         </div>
                     </div>
@@ -271,11 +273,11 @@
         </section>
         <!-- Skills Section -->
         <section id="skills">
-            <h2 class="section-title reveal">Technical Skills</h2>
+            <h2 class="section-title reveal" data-i18n="skills.title">Technical Skills</h2>
             <div class="skills-container reveal">
                 <!-- Category 1 -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <h3 data-i18n="skills.lang"><i class="fas fa-code"></i> Languages</h3>
                     <div class="skill-list">
                         <span class="skill-tag">C/C++</span>
                         <span class="skill-tag">Python</span>
@@ -285,7 +287,7 @@
                 </div>
                 <!-- Category 2 -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-microchip"></i> Embedded & IoT</h3>
+                    <h3 data-i18n="skills.emb"><i class="fas fa-microchip"></i> Embedded & IoT</h3>
                     <div class="skill-list">
                         <span class="skill-tag">ESP-IDF</span>
                         <span class="skill-tag">FreeRTOS</span>
@@ -297,7 +299,7 @@
                 </div>
                 <!-- Category 3 -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Web & Backend</h3>
+                    <h3 data-i18n="skills.web"><i class="fas fa-server"></i> Web & Backend</h3>
                     <div class="skill-list">
                         <span class="skill-tag">Java Spring Boot</span>
                         <span class="skill-tag">React.js</span>
@@ -308,7 +310,7 @@
                 </div>
                 <!-- Category 4 -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Database & Cloud</h3>
+                    <h3 data-i18n="skills.db"><i class="fas fa-database"></i> Database & Cloud</h3>
                     <div class="skill-list">
                         <span class="skill-tag">MySQL</span>
                         <span class="skill-tag">PostgreSQL</span>
@@ -319,7 +321,7 @@
                 </div>
                 <!-- Category 5 -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <h3 data-i18n="skills.tools"><i class="fas fa-tools"></i> Tools</h3>
                     <div class="skill-list">
                         <span class="skill-tag">Git/GitHub</span>
                         <span class="skill-tag">Docker</span>
@@ -341,7 +343,7 @@
             <a href="mailto:phanngochoa2004@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
             <a href="tel:0339961558" title="Phone: 033 996 1558"><i class="fas fa-phone"></i></a>
         </div>
-        <p>&copy; 2026 Phan Ngoc Hoa. Built with HTML, CSS, and JS.</p>
+        <p data-i18n="footer.text">&copy; 2026 Phan Ngoc Hoa. Built with HTML, CSS, and JS.</p>
     </footer>
 
     <script src="script.js"></script>
@@ -378,11 +380,11 @@
             camera.updateProjectionMatrix();
 
             // Lighting setup
-            const directionalLight = new THREE.DirectionalLight(0xc7a9ff, 0);
+            const directionalLight = new THREE.DirectionalLight(0x87cefa, 0);
             directionalLight.position.set(-0.47, -0.32, -1);
             scene.add(directionalLight);
-
-            const pointLight = new THREE.PointLight(0xc2a4ff, 0, 100, 3);
+            
+            const pointLight = new THREE.PointLight(0x87cefa, 0, 100, 3);
             pointLight.position.set(3, 12, 4);
             scene.add(pointLight);
 

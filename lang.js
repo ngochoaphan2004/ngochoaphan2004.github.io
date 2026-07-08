@@ -1,0 +1,172 @@
+const translations = {
+    en: {
+        "nav.home": "Home",
+        "nav.about": "About",
+        "nav.experience": "Experience",
+        "nav.projects": "Projects",
+        "nav.skills": "Skills",
+
+        "hero.subtitle": "Welcome to my portfolio",
+        "hero.title": "Hi, I'm Phan Ngoc Hoa",
+        "hero.desc": "A passionate engineer bridging the gap between hardware and software. Specializing in embedded systems and modern backend architectures.",
+        "hero.contact": "Contact Me",
+        
+        "about.title": "Background",
+        "about.edu.uni": "Ho Chi Minh City University of Technology (HCMUT) - VNUHCM",
+        "about.edu.deg": "Pursuing a Bachelor of Computer Science",
+        "about.edu.date": "Oct 2022 – Present",
+        "about.edu.loc": "Location:",
+        "about.edu.loc_val": "Ho Chi Minh City, Viet Nam",
+        "about.edu.gpa": "GPA:",
+        
+        "about.awd.title": "Honors and Awards",
+        "about.awd.sub": "Provincial Physics Contest",
+        "about.awd.place": "Second Place",
+        "about.awd.loc": "Dong Nai",
+
+        "exp.title": "Experience",
+        "exp.fpt.title": "FPT Software Ho Chi Minh",
+        "exp.fpt.role": "Back-End Developer (Intern)",
+        "exp.fpt.date": "May 2025 – July 2025",
+        "exp.fpt.proj": "Blood Test Management System",
+        "exp.fpt.desc1": "Designed and implemented a microservices-based backend utilizing REST APIs and independent databases for data isolation.",
+        "exp.fpt.desc2": "Engineered high-performance gRPC endpoints and created comprehensive API documentation with Swagger/OpenAPI.",
+        "exp.fpt.desc3": "Implemented a Message Broker for asynchronous data transfer, decoupling systems and ensuring fault tolerance.",
+        "exp.fpt.desc4": "Participated in Agile Scrum workflows to design system architectures using Use Case diagrams and ERDs.",
+
+        "proj.title": "Featured Projects",
+        "proj.type.fs": "Full-Stack / AI",
+        "proj.type.emb": "Embedded Systems",
+        "proj.type.bd": "Big Data / NLP",
+        "proj.type.ds": "Data Science / ML",
+
+        "proj1.title": "Decentralized Federated Learning in Financial Systems",
+        "proj1.date": "August 2025 – June 2026 | Graduation Project",
+        "proj1.desc": "Architected and developed BK-BANK, a comprehensive digital banking system utilizing a Microservices architecture, seamlessly integrated with a novel Decentralized Federated Learning (DFedADP) algorithm for real-time fraud detection.",
+        "proj1.award": "Awarded Excellent Graduation Thesis (Score: 9.85/10)",
+        "proj1.award2": "and resulted in a published paper at the",
+        "proj1.award3": "IAAA 2026 International Conference",
+        "proj1.d1": "Microservices Backend: Engineered Core Ledger, Card Management, and Authentication services using Java Spring Boot, deployed via Docker on Railway PaaS.",
+        "proj1.d2": "Mobile Frontend & NLP: Built a cross-platform mobile banking app with React Native. Integrated a local LLM (Qwen) to provide real-time natural language explanations (XAI) for flagged transactions.",
+        "proj1.d3": "Algorithm Performance: The DFedADP model achieved 80.55% accuracy under extreme heterogeneity on MNIST (outperforming baselines by 39-69%), and a Recall of 0.60 on highly imbalanced credit card data.",
+        
+        "proj2.title": "Automotive Head-Up Display (CHUD)",
+        "proj2.date": "April 2026 – June 2026 | Personal Project",
+        "proj2.desc": "Designed an embedded HUD for vehicles reading real-time telemetries (Speed, RPM, battery) via OBD-II and rendering on an LCD.",
+        "proj2.d1": "Architected FreeRTOS dual-core tasking (Core 1: CAN Bus polling, Core 0: 60 FPS LVGL UI).",
+        "proj2.d2": "Developed OBD-II parser and programmed the ESP32 RISC-V co-processor for ultra-low power deep-sleep cycles.",
+        "proj2.d3": "Integrated hardware calibration with ambient light sensors for dynamic backlight adjustment.",
+        
+        "proj3.title": "Latent Semantic Analysis on Wikipedia",
+        "proj3.date": "Big Data Processing Project",
+        "proj3.desc": "Built a scalable data pipeline using PySpark and HDFS to perform Latent Semantic Analysis (LSA) on the entire English Wikipedia dump.",
+        "proj3.d1": "Processed massive uncompressed XML dumps via spark-xml on distributed nodes.",
+        "proj3.d2": "Generated semantic document embeddings, term embeddings, and extracted top latent topics from millions of articles.",
+        "proj3.d3": "Configured seamless integration between Windows environments and WSL-based HDFS clusters.",
+        
+        "proj4.title": "Los Angeles Crime Data Mining",
+        "proj4.date": "Data Mining Project",
+        "proj4.desc": "Applied advanced data mining techniques to analyze and classify crime data from Los Angeles.",
+        "proj4.d1": "Performed rigorous data preprocessing and outlier handling on large-scale crime datasets.",
+        "proj4.d2": "Utilized the Apriori algorithm to discover frequent itemsets and complex association rules between crime categories, areas, and premises.",
+        "proj4.d3": "Trained predictive models (Decision Trees, Naive Bayes) with hyperparameter tuning to forecast crime occurrences based on spatiotemporal features.",
+
+        "proj.repo": "Repository",
+        "proj.article": "Article",
+
+        "skills.title": "Technical Skills",
+        "skills.lang": "Languages",
+        "skills.emb": "Embedded & IoT",
+        "skills.web": "Web & Backend",
+        "skills.db": "Database & Cloud",
+        "skills.tools": "Tools",
+
+        "footer.text": "© 2026 Phan Ngoc Hoa. Built with HTML, CSS, and JS."
+    },
+    vi: {
+        "nav.home": "Trang chủ",
+        "nav.about": "Giới thiệu",
+        "nav.experience": "Kinh nghiệm",
+        "nav.projects": "Dự án",
+        "nav.skills": "Kỹ năng",
+
+        "hero.subtitle": "Chào mừng đến với Portfolio của tôi",
+        "hero.title": "Xin chào, tôi là Phan Ngọc Hòa",
+        "hero.desc": "Một kỹ sư đam mê kết nối thế giới phần cứng và phần mềm. Chuyên môn sâu về hệ thống nhúng và kiến trúc Backend hiện đại.",
+        "hero.contact": "Liên hệ tôi",
+        
+        "about.title": "Học vấn",
+        "about.edu.uni": "Trường Đại học Bách Khoa TP.HCM (HCMUT) - VNUHCM",
+        "about.edu.deg": "Cử nhân Khoa học Máy tính",
+        "about.edu.date": "Tháng 10/2022 – Hiện tại",
+        "about.edu.loc": "Vị trí:",
+        "about.edu.loc_val": "Thành phố Hồ Chí Minh, Việt Nam",
+        "about.edu.gpa": "GPA:",
+        
+        "about.awd.title": "Thành tích & Giải thưởng",
+        "about.awd.sub": "Kỳ thi Học sinh giỏi Vật Lý Cấp Tỉnh",
+        "about.awd.place": "Giải Nhì",
+        "about.awd.loc": "Đồng Nai",
+
+        "exp.title": "Kinh nghiệm",
+        "exp.fpt.title": "FPT Software TP.HCM",
+        "exp.fpt.role": "Thực tập sinh Back-End (Intern)",
+        "exp.fpt.date": "Tháng 5/2025 – Tháng 7/2025",
+        "exp.fpt.proj": "Hệ thống Quản lý Xét nghiệm Máu",
+        "exp.fpt.desc1": "Thiết kế và triển khai backend theo kiến trúc Microservices sử dụng REST APIs và cơ sở dữ liệu độc lập để cô lập dữ liệu.",
+        "exp.fpt.desc2": "Phát triển các API gRPC hiệu suất cao và tài liệu API chi tiết bằng Swagger/OpenAPI.",
+        "exp.fpt.desc3": "Triển khai Message Broker cho việc truyền dữ liệu bất đồng bộ, giảm sự phụ thuộc giữa các hệ thống và đảm bảo khả năng chịu lỗi.",
+        "exp.fpt.desc4": "Tham gia quy trình Agile Scrum để thiết kế kiến trúc hệ thống thông qua sơ đồ Use Case và ERD.",
+
+        "proj.title": "Dự án Tiêu biểu",
+        "proj.type.fs": "Full-Stack / AI",
+        "proj.type.emb": "Hệ thống Nhúng",
+        "proj.type.bd": "Big Data / NLP",
+        "proj.type.ds": "Data Science / ML",
+
+        "proj1.title": "Học máy Liên kết Phi tập trung trong Hệ thống Tài chính",
+        "proj1.date": "Tháng 8/2025 – Tháng 6/2026 | Đồ án Tốt nghiệp",
+        "proj1.desc": "Thiết kế và phát triển BK-BANK, hệ thống ngân hàng số toàn diện sử dụng kiến trúc Microservices, tích hợp thuật toán Học máy Liên kết Phi tập trung (DFedADP) mới lạ để phát hiện gian lận theo thời gian thực.",
+        "proj1.award": "Đạt điểm Đồ án Tốt nghiệp Xuất sắc (9.85/10)",
+        "proj1.award2": "và được chấp nhận đăng bài báo khoa học tại",
+        "proj1.award3": "Hội nghị Quốc tế IAAA 2026",
+        "proj1.d1": "Microservices Backend: Xây dựng các dịch vụ Core Ledger, Quản lý Thẻ, và Xác thực bằng Java Spring Boot, triển khai qua Docker trên Railway PaaS.",
+        "proj1.d2": "Mobile Frontend & NLP: Xây dựng ứng dụng ngân hàng di động đa nền tảng bằng React Native. Tích hợp LLM cục bộ (Qwen) để cung cấp giải thích bằng ngôn ngữ tự nhiên (XAI) theo thời gian thực cho các giao dịch bị cảnh báo.",
+        "proj1.d3": "Hiệu suất Thuật toán: Mô hình DFedADP đạt độ chính xác 80.55% dưới điều kiện cực kỳ không đồng nhất trên MNIST (vượt qua các phương pháp cơ sở từ 39-69%), và độ nhạy (Recall) là 0.60 trên dữ liệu thẻ tín dụng mất cân bằng nghiêm trọng.",
+        
+        "proj2.title": "Màn hình Hiển thị Kính lái Ô tô (CHUD)",
+        "proj2.date": "Tháng 4/2026 – Tháng 6/2026 | Dự án Cá nhân",
+        "proj2.desc": "Thiết kế hệ thống HUD nhúng cho xe hơi, đọc dữ liệu thời gian thực (Tốc độ, Vòng tua máy, Pin) qua chuẩn OBD-II và hiển thị lên màn hình LCD.",
+        "proj2.d1": "Thiết kế kiến trúc đa luồng FreeRTOS (Core 1: Lấy dữ liệu CAN Bus, Core 0: Giao diện LVGL 60 FPS).",
+        "proj2.d2": "Phát triển bộ phân tích OBD-II và lập trình cho chip phụ ESP32 RISC-V để tối ưu hóa năng lượng siêu tiết kiệm (deep-sleep).",
+        "proj2.d3": "Tích hợp phần cứng với cảm biến ánh sáng môi trường để tự động điều chỉnh độ sáng màn hình.",
+        
+        "proj3.title": "Phân tích Ngữ nghĩa Ẩn (LSA) trên Wikipedia",
+        "proj3.date": "Dự án Xử lý Dữ liệu Lớn (Big Data)",
+        "proj3.desc": "Xây dựng luồng xử lý dữ liệu mở rộng bằng PySpark và HDFS để thực hiện Phân tích Ngữ nghĩa Ẩn (LSA) trên toàn bộ kho dữ liệu Wikipedia Tiếng Anh.",
+        "proj3.d1": "Xử lý hàng loạt file XML không nén dung lượng lớn thông qua spark-xml trên các node phân tán.",
+        "proj3.d2": "Tạo ra các embedding cho tài liệu và từ vựng, trích xuất các chủ đề ẩn hàng đầu từ hàng triệu bài viết.",
+        "proj3.d3": "Cấu hình tích hợp liền mạch giữa môi trường Windows và cụm máy chủ HDFS trên WSL.",
+        
+        "proj4.title": "Khai phá Dữ liệu Tội phạm Los Angeles",
+        "proj4.date": "Dự án Khai phá Dữ liệu (Data Mining)",
+        "proj4.desc": "Áp dụng các kỹ thuật khai phá dữ liệu tiên tiến để phân tích và phân loại dữ liệu tội phạm từ Los Angeles.",
+        "proj4.d1": "Thực hiện tiền xử lý dữ liệu nghiêm ngặt và xử lý giá trị ngoại lai trên tập dữ liệu tội phạm quy mô lớn.",
+        "proj4.d2": "Sử dụng thuật toán Apriori để khám phá các tập phổ biến và quy luật kết hợp phức tạp giữa các loại tội phạm, khu vực và địa điểm.",
+        "proj4.d3": "Huấn luyện các mô hình dự đoán (Decision Trees, Naive Bayes) với tinh chỉnh siêu tham số để dự báo khả năng xảy ra tội phạm dựa trên các đặc trưng không gian và thời gian.",
+
+        "proj.repo": "Mã nguồn",
+        "proj.article": "Bài báo",
+
+        "skills.title": "Kỹ năng Công nghệ",
+        "skills.lang": "Ngôn ngữ",
+        "skills.emb": "Hệ thống Nhúng & IoT",
+        "skills.web": "Web & Backend",
+        "skills.db": "Cơ sở dữ liệu & Đám mây",
+        "skills.tools": "Công cụ",
+
+        "footer.text": "© 2026 Phan Ngoc Hoa. Xây dựng bằng HTML, CSS, và JS."
+    }
+};
+
+window.translations = translations;

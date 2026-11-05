@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phan Ngoc Hoa | Portfolio</title>
     <link rel="icon" href="favicon.png" type="image/png">
-    <meta name="description" content="Portfolio of Phan Ngoc Hoa - Embedding & Software Engineer">
+    <meta name="description" content="Portfolio of Phan Ngoc Hoa, a Computer Science graduate with projects in federated learning, embedded systems, and backend engineering.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="lang.js"></script>
@@ -80,9 +80,9 @@
                 <!-- Education -->
                 <div class="glass-card reveal">
                     <h3 class="card-title" data-i18n="about.edu.uni">Ho Chi Minh City University of Technology (HCMUT) - VNUHCM</h3>
-                    <h4 class="card-subtitle" data-i18n="about.edu.deg">Pursuing a Bachelor of Computer Science</h4>
+                    <h4 class="card-subtitle" data-i18n="about.edu.deg">Bachelor of Computer Science</h4>
                     <div class="card-date">
-                        <i class="far fa-calendar-alt"></i> <span data-i18n="about.edu.date">Oct 2022 – Present</span>
+                        <i class="far fa-calendar-alt"></i> <span data-i18n="about.edu.date">Started October 2022</span>
                     </div>
                     <div class="card-meta">
                         <strong data-i18n="about.edu.loc">Location:</strong> <span data-i18n="about.edu.loc_val">Ho Chi Minh City, Viet Nam</span> <br>
@@ -137,40 +137,33 @@
                 <!-- Project 1 -->
                 <div class="project-card project-featured reveal" style="transition-delay: 0.1s;">
                     <div class="project-content">
-                        <div class="project-type" data-i18n="proj.type.fs">Full-Stack / AI</div>
+                        <div class="project-type" data-i18n="proj.type.fs">Research / Machine Learning</div>
                         <h3 class="project-title" data-i18n="proj1.title">Decentralized Federated Learning in Financial Systems</h3>
                         <div class="project-date" data-i18n="proj1.date">August 2025 – June 2026 | Graduation Project</div>
                         <div class="project-desc">
-                            <span data-i18n="proj1.desc">Architected and developed <strong>BK-BANK</strong>, a comprehensive digital banking system
-                            utilizing a Microservices architecture, seamlessly integrated with a novel Decentralized
-                            Federated Learning (DFedADP) algorithm for real-time fraud detection.</span> 
-                            <strong data-i18n="proj1.award">Awarded Excellent Graduation Thesis (Score: 9.85/10)</strong> <span data-i18n="proj1.award2">and resulted in a published paper at the</span> <strong data-i18n="proj1.award3">IAAA 2026 International Conference</strong>.
+                            <span data-i18n="proj1.desc">Our team developed DFedADP, an adaptive aggregation algorithm for training fraud detection models across peers without a central server or sharing raw transaction data.</span>
+                            <strong data-i18n="proj1.award">Awarded Excellent Graduation Thesis (Score: 9.85/10)</strong> <span data-i18n="proj1.award2">and a paper accepted at</span> <strong data-i18n="proj1.award3">IAAA 2026 International Conference</strong>.
                             <ul>
-                                <li data-i18n="proj1.d1"><strong>Microservices Backend:</strong> Engineered Core Ledger, Card Management, and
-                                    Authentication services using Java Spring Boot, deployed via Docker on Railway PaaS.
-                                </li>
-                                <li data-i18n="proj1.d2"><strong>Mobile Frontend & NLP:</strong> Built a cross-platform mobile banking app
-                                    with React Native. Integrated a local LLM (Qwen) to provide real-time natural
-                                    language explanations (XAI) for flagged transactions.</li>
-                                <li data-i18n="proj1.d3"><strong>Algorithm Performance:</strong> The DFedADP model achieved 80.55% accuracy
-                                    under extreme heterogeneity on MNIST (outperforming baselines by 39-69%), and a
-                                    Recall of 0.60 on highly imbalanced credit card data.</li>
+                                <li data-i18n="proj1.d1">My contribution: Researched aggregation methods and evaluated DFedADP in Python using P2PFL under different data distributions.</li>
+                                <li data-i18n="proj1.d2">Method: Used gradient tracking to estimate the network update direction, then used cosine similarity and Gompertz weighting to reduce the influence of misaligned updates.</li>
+                                <li data-i18n="proj1.d3">Results: 80.55% accuracy on MNIST in the strongest tested non-IID setting (Dirichlet concentration 0.1); approximately 0.38 F1 and 0.60 recall on credit card fraud detection. Communication cost was about 28.5 MB per node per round.</li>
                             </ul>
                         </div>
                         <div class="project-tech">
-                            <span>React Native</span>
-                            <span>Java Spring Boot</span>
-                            <span>Microservices</span>
                             <span>Python</span>
-                            <span>LLM / NLP</span>
-                            <span>Oracle Cloud</span>
+                            <span>P2PFL</span>
+                            <span>Federated Learning</span>
+                            <span>Gradient Tracking</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/DATN-252" target="_blank">
                                 <i class="fab fa-github"></i> <span data-i18n="proj.repo">Repository</span>
                             </a>
-                            <a href="https://tinyurl.com/DFedADP" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> <span data-i18n="proj.article">Article</span>
+                            <a href="IAAA2026_Adaptive_Aggregation_DFL%20.pdf" target="_blank" rel="noopener">
+                                <i class="fas fa-file-pdf"></i> <span data-i18n="proj.article">Conference paper (PDF)</span>
+                            </a>
+                            <a href="HK252_08_DATN_Finish_2211093_2211129_2211101_2211133.pdf" target="_blank" rel="noopener">
+                                <i class="fas fa-file-pdf"></i> <span data-i18n="proj.thesis">Thesis report (PDF)</span>
                             </a>
                         </div>
                     </div>
